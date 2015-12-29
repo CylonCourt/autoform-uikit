@@ -1,0 +1,11 @@
+<template name="afQuickField_uikit">
+  {{#if isGroup atts=this}}
+    {{> afObjectField_uikit}}
+  {{else}}
+    {{#if isFieldArray atts=this}}
+      {{> afArrayField_uikit}}
+    {{else}}
+      {{> afFormGroup_uikit groupAtts}}
+    {{/if}}
+  {{/if}}
+</template>

@@ -1,0 +1,16 @@
+<template name="afFormGroup_uikit">
+  <div class="uk-form-row {{#if afFieldIsInvalid name=this.name}}uk-form-danger{{/if}} {{afFormGroupClass}}" data-required={{required}} {{afFormGroupAtts}}>
+    {{#if this.afFieldInputAtts.icon}}
+    {{> afIcon_uikit this.afFieldInputAtts}}
+    {{/if}}
+    {{#unless skipLabel}}
+    {{>afLabel_uikit this}}
+    <div class="uk-form-controls">
+      {{> afFieldInput this.afFieldInputAtts}}
+    </div>
+    {{else}}
+    {{> afFieldInput this.afFieldInputAtts}}
+    {{/unless}}
+    <span class="uk-form-help-block">{{{afFieldMessage name=this.name}}}</span>
+  </div>
+</template>

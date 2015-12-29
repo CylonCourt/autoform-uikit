@@ -1,0 +1,21 @@
+<template name="quickForm_uikit">
+  {{#autoForm qfAutoFormContext}}
+
+    {{> afQuickFields}}
+
+    {{#if qfShouldRenderButton}}
+      <div class="uk-form-row">
+        <div class="uk-form-controls">
+          <button type="submit" {{submitButtonAtts}}>
+            {{#with ../atts.buttonContent}}
+              {{this}}
+            {{else}}
+              Submit
+            {{/with}}
+          </button>
+        </div>
+      </div>
+    {{/if}}
+
+  {{/autoForm}}
+</template>

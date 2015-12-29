@@ -1,0 +1,8 @@
+<template name="afCheckboxGroupInline_uikit">
+  <div class="uk-form-controls">
+    {{#each items}}
+    <input type="checkbox" value="{{value}}" {{atts}} />
+    <label for="{{itemAtts.id}}">{{label}}</label>
+    {{/each}}
+  </div>
+</template>

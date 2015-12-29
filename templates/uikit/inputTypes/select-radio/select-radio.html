@@ -1,0 +1,8 @@
+<template name="afRadioGroup_uikit">
+  <div class="uk-form-controls">
+    {{#each this.items}}
+    <input type="radio" value="{{this.value}}" {{itemAtts}} />
+    <label for="{{itemAtts.id}}">{{this.label}}</label>
+    {{/each}}
+  </div>
+</template>

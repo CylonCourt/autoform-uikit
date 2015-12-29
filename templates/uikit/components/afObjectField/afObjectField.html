@@ -1,0 +1,11 @@
+<template name="afObjectField_uikit">
+  <div class="uk-panel uk-panel-box uk-panel-header autoform-object-field">
+    {{#with afFieldLabelText name=this.name}}
+      <div class="uk-panel-title">{{this}}</div>
+    {{/with}}
+    {{#if afFieldIsInvalid name=this.name}}
+      <div class="uk-alert uk-alert-danger">{{{afFieldMessage name=this.name}}}</div>
+    {{/if}}
+    {{> afQuickFields name=this.name}}
+  </div>
+</template>

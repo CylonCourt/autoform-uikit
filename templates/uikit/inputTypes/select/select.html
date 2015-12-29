@@ -1,0 +1,15 @@
+<template name="afSelect_uikit">
+  <select {{atts}} class="uk-form-select" data-uk-form-select>
+    {{#each this.items}}
+    {{#if this.optgroup}}
+    <optgroup label="{{this.optgroup}}">
+      {{#each this.items}}
+      <option {{optionAtts}}>{{this.label}}</option>
+      {{/each}}
+    </optgroup>
+    {{else}}
+    <option {{optionAtts}}>{{this.label}}</option>
+    {{/if}}
+    {{/each}}
+  </select>
+</template>
