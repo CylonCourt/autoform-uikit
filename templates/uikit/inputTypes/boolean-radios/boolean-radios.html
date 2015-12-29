@@ -1,5 +1,5 @@
 <template name="afBooleanRadioGroup_uikit">
-  <div class="af-radio-group {{rowColumnAtts}}">
+  <div class="af-radio-group {{rowColumnAtts}}" {{dsk}}>
     <p class="{{falseColumnAtts}}">
       <input id="{{atts.id}}_false" type="radio" value="false" {{falseAtts}} />
       <label for="{{atts.id}}_false">{{#with atts.falseLabel}}{{this}}{{else}}False{{/with}}</label>
@@ -8,5 +8,10 @@
       <input id="{{atts.id}}_true" type="radio" value="true" {{trueAtts}} />
       <label for="{{atts.id}}_true">{{#with atts.trueLabel}}{{this}}{{else}}True{{/with}}</label>
     </p>
+    {{#if this.atts.nullLabel}}
+    <p>
+      <label><input type="radio" value="null" name="{{this.name}}" {{nullAtts}} /> {{this.atts.nullLabel}}</label>
+    </p>
+    {{/if}}
   </div>
 </template>

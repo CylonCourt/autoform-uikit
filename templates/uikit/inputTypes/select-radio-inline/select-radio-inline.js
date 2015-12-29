@@ -1,3 +1,4 @@
 Template.afRadioGroupInline_uikit.helpers({
-  itemAtts: Utility.selectedAttsAdjust,
+  atts: Utility.selectedAttsAdjust,
+  dsk: Utility.dsk,
 });

@@ -5,7 +5,7 @@ Utility.selectedAttsAdjust = function() {
     atts.checked = '';
   }
 
-  atts.id = atts.id + '_' + this._id;
+  atts.id = `${atts.id}_${this._id}`;
   delete atts['data-schema-key'];
   return atts;
 };

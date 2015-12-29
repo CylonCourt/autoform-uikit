@@ -1,12 +1,12 @@
 Package.describe({
   name: 'cyloncourt:autoform-uikit',
   summary: 'uikit theme for Autoform',
-  version: '0.0.1',
+  version: '0.0.2',
   git: 'https://github.com/CylonCourt/autoform-uikit',
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0');
+  api.versionsFrom('1.2.0.1');
   api.use([
     'ecmascript@0.1.6',
     'templating',
@@ -14,17 +14,18 @@ Package.onUse(function(api) {
   ], 'client');
 
   api.use([
-    'aldeed:autoform@5.7.1',
+    'aldeed:autoform@5.8.1',
   ]);
 
   api.addFiles([
     // utility
     'utilities/utility.js',
     // utility template helpers
-    'utilities/selected-atts-adjust.js',
-    'utilities/atts-toggle-invalid-class.js',
     'utilities/atts-check-selected.js',
+    'utilities/atts-toggle-invalid-class.js',
+    'utilities/dsk.js',
     'utilities/option-atts.js',
+    'utilities/selected-atts-adjust.js',
     // input types
     'templates/uikit/inputTypes/boolean-checkbox/boolean-checkbox.html',
     'templates/uikit/inputTypes/boolean-checkbox/boolean-checkbox.js',
@@ -36,7 +37,6 @@ Package.onUse(function(api) {
     'templates/uikit/inputTypes/button/button.js',
     'templates/uikit/inputTypes/color/color.html',
     'templates/uikit/inputTypes/color/color.js',
-    'templates/uikit/inputTypes/contenteditable/contenteditable.html',
     'templates/uikit/inputTypes/date/date.html',
     'templates/uikit/inputTypes/date/date.js',
     'templates/uikit/inputTypes/datetime/datetime.html',

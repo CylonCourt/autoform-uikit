@@ -1,18 +1,23 @@
 Template.afBooleanRadioGroup_uikit.helpers({
   atts: Utility.attsToggleInvalidClass,
-});
-
-Template.afBooleanRadioGroup_uikit.helpers({
+  dsk: Utility.dsk,
   falseAtts: function() {
-    let atts = _.omit(this.atts, 'id', 'trueLabel', 'falseLabel', 'data-schema-key');
+    var atts = _.omit(this.atts, 'trueLabel', 'falseLabel', 'nullLabel', 'data-schema-key');
     if (this.value === false) {
       atts.checked = '';
     }
     return atts;
   },
   trueAtts: function() {
-    let atts = _.omit(this.atts, 'id', 'trueLabel', 'falseLabel', 'data-schema-key');
+    var atts = _.omit(this.atts, 'trueLabel', 'falseLabel', 'nullLabel', 'data-schema-key');
     if (this.value === true) {
+      atts.checked = '';
+    }
+    return atts;
+  },
+  nullAtts: function() {
+    var atts = _.omit(this.atts, 'trueLabel', 'falseLabel', 'nullLabel', 'data-schema-key');
+    if (this.value !== true && this.value !== false) {
       atts.checked = '';
     }
     return atts;
