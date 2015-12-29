@@ -12,7 +12,7 @@ Template.quickForm_uikit.helpers({
   qfAutoFormContext() {
     let ctx = _.clone(this.qfAutoFormContext || {});
 
-    ctx = AutoForm.Utility.addClass(ctx, 'ui-form');
+    ctx = AutoForm.Utility.addClass(ctx, 'uk-form');
     delete ctx['id-prefix'];
     return ctx;
   }
