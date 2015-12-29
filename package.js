@@ -2,7 +2,7 @@ Package.describe({
   name: 'cyloncourt:autoform-uikit',
   summary: 'uikit theme for Autoform',
   version: '0.0.2',
-  git: 'https://github.com/CylonCourt/autoform-uikit',
+  git: 'git@github.com:CylonCourt/autoform-uikit.git',
 });
 
 Package.onUse(function(api) {
