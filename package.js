@@ -8,7 +8,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
   api.use([
-    'ecmascript',
+    'ecmascript@0.1.6',
     'templating',
     'underscore',
   ], 'client');
